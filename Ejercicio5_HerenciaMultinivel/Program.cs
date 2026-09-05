@@ -1,13 +1,22 @@
-using Ejercicio5_HerenciaMultinivel;
+using System;
 
-Console.WriteLine("=== EJERCICIO 5: HERENCIA MULTINIVEL ===\n");
+namespace Ejercicio5_HerenciaMultinivel
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("=== EJERCICIO 5: HERENCIA MULTINIVEL ===\n");
 
-Perro perro = new Perro();
+            Perro perro = new Perro();
 
-// Alimentar() se hereda de Mamifero.
-perro.Alimentar();
+            // Alimentar() se hereda de Mamifero.
+            perro.Alimentar();
 
-// HacerSonido() se define originalmente en Animal y se sobrescribe en Perro.
-perro.HacerSonido();
+            // HacerSonido() se define en Animal y se sobrescribe en Perro.
+            perro.HacerSonido();
 
-Console.WriteLine("\nJerarquía utilizada: Animal -> Mamifero -> Perro");
+            Console.WriteLine("\nJerarquía utilizada: Animal -> Mamifero -> Perro");
+        }
+    }
+}
