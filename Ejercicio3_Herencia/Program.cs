@@ -1,10 +1,19 @@
-using Ejercicio3_Herencia;
+using System;
 
-Console.WriteLine("=== EJERCICIO 3: HERENCIA SIMPLE ===\n");
+namespace Ejercicio3_Herencia
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("=== EJERCICIO 3: HERENCIA SIMPLE ===\n");
 
-Coche miCoche = new Coche();
+            Coche miCoche = new Coche();
 
-// Los dos primeros métodos son heredados de Vehiculo.
-miCoche.Arrancar();
-miCoche.Conducir();
-miCoche.Detener();
+            // Arrancar() y Detener() se heredan de la clase Vehiculo.
+            miCoche.Arrancar();
+            miCoche.Conducir();
+            miCoche.Detener();
+        }
+    }
+}
