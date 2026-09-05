@@ -5,12 +5,8 @@ namespace Ejercicio1_Abstraccion;
 /// </summary>
 public class CuentaBancaria
 {
-    private decimal saldo;
-
-    public CuentaBancaria(decimal saldoInicial = 0)
-    {
-        saldo = saldoInicial >= 0 ? saldoInicial : 0;
-    }
+    // El saldo es privado para impedir modificaciones directas desde fuera de la clase.
+    private decimal saldo = 0;
 
     public void Depositar(decimal monto)
     {
